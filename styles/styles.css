@@ -364,17 +364,17 @@ body {
 	padding: 5px 0;
 }
 .items-list li {
-	/*display: inline-block;*/
 	list-style-type: none;
-	/*float: left;*/
 	width: 50%;
 	text-align: center;
-	padding: 1%;
-	/*margin: 15px 0;*/
+	/*padding-right: 1%;*/
 	box-sizing: border-box;
-	/*! border: 1px solid #ededed; */
 	padding-bottom: 15px;
 	margin-bottom: 15px;
+}
+.items-list li > a {
+	display: block;
+	border: 1px solid #ededed;
 }
 .items-list .product-name {
 	font-size: 0.9em;
@@ -395,6 +395,7 @@ body {
 	color: green;
 	/*border: 1px solid #dedede;*/
 }
+
 /*@media screen and (max-width:320px){ */
 .items-list ul li:nth-child(odd){
 	/*margin-right: 4%;*/
@@ -404,8 +405,8 @@ body {
 	color: #1a1a00;
 	text-align: center;
 }
-.items-list ul li:hover {
-	outline: 1px solid grey;
+.items-list ul li > a:hover {
+	border: 1px solid grey;
 }
 .items-list .more {
 	clear: both;
@@ -566,6 +567,9 @@ body {
 	.product-tabs {
 		margin: 10px 0;
 	}
+	.product-tabs .l-tab{
+		display: none;
+	}
 	.product-tabs input, .product-tabs section {
 	  clear: both;
 	  padding-top: 10px;
@@ -586,9 +590,9 @@ body {
         text-align: left;
        	padding-left: 10px;
         background: #f0f0f0;
-        border-color: gray;
+        border-color: #cccccc;
         border-style: solid;
-        border-width: 1px 1px 0 1px;
+        /*! border-width: 1px 1px 0 1px; */
 	}
 	.product-tabs > label:nth-child(8){
 		border-bottom: 1px solid gray;
@@ -602,6 +606,19 @@ body {
 	  /*border: 0 1px solid gray;*/
 	  border-left: 1px solid gray;
 	  border-right: 1px solid gray;
+	}
+	#tab11:checked ~ #tab1-content,
+	#tab22:checked ~ #tab2-content,
+	#tab33:checked ~ #tab3-content{
+	  display: block;
+	  padding: 10px;
+	  background: #fff;
+	  /*border: 0 1px solid gray;*/
+	  /*! border-left: 1px solid gray; */
+	  /*! border-right: 1px solid gray; */
+	}
+	.product-tabs .l-input:checked + label{
+		background-color: #fff;
 	}
 	#tab3:checked ~ #tab3-content{
 		border-bottom: 1px solid gray;
@@ -661,7 +678,7 @@ footer .cat-title {
 	background-position: left center;
 }
 .footer-email{
-	background-image: url(../images/icons/email-yellow.png);
+	background-image: url(../images/icons/email.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: left center;
@@ -762,7 +779,7 @@ Media Queries
 	}
 	.product-image-gallery{
 		/*width: 90%;*/
-		padding: 0 5%;
+		/*! padding: 0; */
 	}
 	.product-image-gallery img {
 		/*padding: 0 5%;*/
@@ -835,7 +852,7 @@ Media Queries
 	}
 
 	.product-image-gallery{
-		padding: 0 7%;
+		/*! padding: 0 7%; */
 	}
 
 	/*Footer*/
@@ -960,7 +977,7 @@ Media Queries
 	}
 	.product-image-gallery{
 		margin: 0 auto;
-		padding: 5px;
+		padding: 0;
 	}
 
 	.product-image-gallery img {
@@ -988,7 +1005,7 @@ Media Queries
 	.items-list ul li{
 		/*float: none;*/
 		width: calc(100%/3);
-		padding: 2%;
+		padding: 1.5%;
 	}
 	
 
@@ -1075,14 +1092,14 @@ Media Queries
 	#menu-list{
 		display: block;
 	}
-#menu-list li{
-	float: left;
-	display: inline-block;
-	margin-bottom: 0;
-	padding: 10px;
-	font-size: 0.95em;
-	background-color: #fff;
-}
+	#menu-list li{
+		float: left;
+		display: inline-block;
+		margin-bottom: 0;
+		padding: 10px;
+		font-size: 0.95em;
+		background-color: #fff;
+	}
 	#menu-list li:last-child{
 		border-right: none;
 	}
@@ -1093,11 +1110,11 @@ Media Queries
 	#menu-list li:hover >  a{
 /* 		color: #fff; */
 	} 
-#menu-list li a {
-	text-align: center;
-	padding-left: 0;
-	color: #005500;
-}
+	#menu-list li a {
+		text-align: center;
+		padding-left: 0;
+		color: #005500;
+	}
 	/* End Menu's styles */
 
 	.mobile-nav {
@@ -1115,12 +1132,25 @@ Media Queries
 	/*Product tabs*/
 	.product-tabs{
 		width: 100%;
-		background-color: gray;
+		background-color: #f0f0f0;
+		border:1px solid #cccccc;
 	}
-	.product-tabs label{
+	.product-tabs > .m-tab{
+		display: none;
+	}
+	
+	.product-tabs .l-tab{
 		display: inline-block;
 		float: left;
 		padding: 0 30px;
+	}
+	.product-tabs > label:first-child{
+		background-color: #fff;
+	}
+	#tab1-content{
+	  display: block;
+	  padding: 10px;
+	  background: #fff;
 	}
 
 	/* End of Product tabs*/
@@ -1141,8 +1171,7 @@ Media Queries
 	}
 		/*Copyright*/
 	footer .copy-right {
-		/*margin-top: 10px;*/
-		/*text-align: center;*/
+		
 		background: none;
 		font-size: 80%;
 		padding: 0.5% 0;
@@ -1153,7 +1182,7 @@ Media Queries
 @media screen and (min-width: 75em) {  
 
 	.product-image-gallery{
-		width: 96%;
+		/*! width: 96%; */
 		margin: 0 auto;
 	}
 
