@@ -590,6 +590,14 @@ body {
 		margin: 10px auto;
 		padding: 5px;
 	}
+	.bold {
+		font-weight: bold;
+	}
+	.gia-si{
+		font-size: 0.8em;
+		color: blue;
+		font-style: italic;
+	}
 	.product-info-main .sharing {
 		padding: 10px 5% 10px 40%;
 	}
