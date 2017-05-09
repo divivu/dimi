@@ -434,16 +434,17 @@ body {
 }
 .items-list .more {
 	clear: both;
-	margin-top: 15px;
+	margin-top: 5px;
 	/*font-size: 110%;*/
-	padding: 5px;
+	padding: 7px;
 	float: right;
 }
 .items-list p.more a{
 	/*display: block;*/
 	/*border: 1px solid lime;*/
 	background-color: #99ff99;
-	padding: 5px;
+	padding: 7px;
+	font-size: 95%;
 	border-radius: 5px;
 	/*color: #795101;	*/
 	color: darkgreen;
@@ -597,6 +598,7 @@ body {
 		font-size: 0.8em;
 		color: blue;
 		font-style: italic;
+		text-align: center;
 	}
 	.product-info-main .sharing {
 		padding: 10px 5% 10px 40%;
@@ -1003,17 +1005,16 @@ Media Queries
 		display: block;
 	}
 
-	.product-img-box, .product-info-main{
-		float: left;
-		width: 50%;
-	}
 	.product-img-box{
-		/*width: 50%;*/
+		float: left;
+		width: 45%;
 	}
-	
 	.product-info-main{
+		width: 55%;
+		float: left;
 		padding: 0 15px;
 	}
+
 	.product-image-gallery{
 		margin: 0 auto;
 		padding: 0;
@@ -1109,7 +1110,7 @@ Media Queries
 		justify-content: center;
 	}
 	.header-hotline .phone-title{
-		color:#666600;
+		color:#663d00;
 	}
 	.header-hotline .phone-number {
 		line-height: 1.3em;
@@ -1169,11 +1170,11 @@ Media Queries
 		border-right: none;
 	}
 	#menu-list li:hover{
-		background-color: lime;
+		background-color: #ded594;
 		color: #fff;
 	}
 	#menu-list li:hover >  a{
-/* 		color: #fff; */
+ 		color: green; 
 	} 
 	#menu-list li a {
 		text-align: center;
@@ -1192,6 +1193,9 @@ Media Queries
 		float: none;
 		width: 25%;
 		padding: 1%; 	
+	}
+	.gia-si{
+		font-size: 1em;
 	}
 
 	/*Product tabs*/
@@ -1251,6 +1255,12 @@ Media Queries
 		margin: 0 auto;
 	}
 
+	.product-img-box{
+		width: 40%;
+	}
+	.product-info-main{
+		width: 60%;
+	}
 
 	.footer-block-items {
 		padding-left: 5.5%;
