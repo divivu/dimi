@@ -123,8 +123,9 @@ a:hover {
 	margin: 0 auto;
 }
 .go-to-top {
-	margin-left: 65%;
+	float: right;
 	margin-top: 15px;
+	margin-right: 15px;
 }
 .go-to-top h2 {
 	color: #b57a01;	
@@ -524,24 +525,36 @@ body {
 		display: none;
 	}
 
-	.product-info-main .p-price, .product-info-main .p-status {
-		display: inline-block;
-		/*float: left;*/	
-		max-width: 50%;
-		margin: 15px 0;
-	}
-	.product-info-main .p-status {
-		float: left;
-		padding-left: 5%;
-		color: #118709;
-	}
-	.product-info-main .p-price {
-		float: right;
-		padding-right: 5%;
-		font-size: 1.2em;
-		color: #09544a;
+	.product-info-main .availability {
+		margin-top: 10px;
+		/*background-color: lime;*/
+		color: green;
+		text-align: center;
+		padding: 3px;
+		border: 1px solid #e5e5e5;
+		border-radius: 5px;
+		/*color: #118709;*/
 	}
 
+	.price-box {
+		display: block;
+		text-align: center;
+	}
+
+	.main-price, .sub-price, .wholesale-price{
+		display: block;
+		margin-bottom: 5px;
+	}
+	.main-price{
+		margin: 20px;
+		border: 1px solid #cce5ea;
+		font-size: 130%;
+		padding: 10px;
+		color: #663509;
+	}
+	.wholesale-price {
+		font-size: 80%;
+	}
 	.phone-order {
 		width: 100%;
 		color: darkgreen;
@@ -594,12 +607,14 @@ body {
 	.bold {
 		font-weight: bold;
 	}
-	.gia-si{
-		font-size: 0.8em;
-		color: blue;
-		font-style: italic;
+
+	/* Shipping box*/
+
+	.shipping {
+		display: block;
 		text-align: center;
 	}
+
 	.product-info-main .sharing {
 		padding: 10px 5% 10px 40%;
 	}
@@ -1051,9 +1066,6 @@ Media Queries
 
 	/* Main */
 
-	.go-to-top {
-		margin-left: 85%;
-	}
 	/* Footer */
 	.footer-block-items {
 		padding-left: 8%;
