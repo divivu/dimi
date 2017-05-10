@@ -567,7 +567,6 @@ footer {
 		color: darkgreen;
 		background-color: #dcf9f2;
 		margin:15px auto;
-		margin-right: 135px;
 		padding: 10px;
 
 		border:1px solid #b5a45a;
@@ -863,6 +862,12 @@ Media Queries
 	.page-header .slogan {
 		font-size: 1em;
 		line-height: 1.5em;
+	}
+
+	.phone-order {
+		max-width: 380px;
+		/*margin-right: auto;*/
+		/*margin-left: auto;*/
 	}
 
 	/*Footer*/
